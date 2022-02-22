@@ -1,0 +1,6 @@
+{
+  "short_name": "Lista de Tarefas",
+  "name": "Lista de Tarefas",
+  "start_url": ".",
+  "display": "standalone"
+}

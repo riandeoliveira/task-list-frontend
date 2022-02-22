@@ -1,0 +1,21 @@
+.add_task {
+  background-color: #0070f5;
+  border-bottom: 2.5px solid #00000080;
+  border-radius: 5px;
+  border-right: 2.5px solid #00000080;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 10px;
+  transition: background-color 0.3s ease;
+}
+.add_task:active {
+  border: 0;
+  border-left: 2.5px solid #00000080;
+  border-top: 2.5px solid #00000080;
+}
+.add_task:hover {
+  background-color: #3992ff;
+}

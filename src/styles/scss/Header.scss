@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./mixins";
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  animation: fade-in 1s ease-out, slide-up 1s ease-out;
+  color: $header-color;
+}
+
+.nav_icons {
+  animation: fade-in 1s ease-out;
+  cursor: pointer;
+  fill: $icon-color;
+  height: 32px;
+  width: 32px;
+}
+
+@include fade-in;
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

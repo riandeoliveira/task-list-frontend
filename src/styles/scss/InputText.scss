@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./mixins";
+
+.add_task {
+  animation: slide-right 1s ease-out forwards;
+  background-color: $input-bg-color;
+  border-radius: 5px;
+  color: $input-color;
+  font-size: 16px;
+  height: 40px;
+  margin-right: 10px;
+  min-width: 100px;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $input-hover-color;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    flex: 0.5;
+  }
+
+  50% {
+    flex: 3;
+  }
+
+  to {
+    flex: 2;
+  }
+}

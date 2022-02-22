@@ -1,0 +1,40 @@
+.add_task {
+  -webkit-animation: slide-right 1s ease-out forwards;
+          animation: slide-right 1s ease-out forwards;
+  background-color: #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+  margin-right: 10px;
+  min-width: 100px;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+.add_task:hover {
+  background-color: #555;
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    flex: 0.5;
+  }
+  50% {
+    flex: 3;
+  }
+  to {
+    flex: 2;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    flex: 0.5;
+  }
+  50% {
+    flex: 3;
+  }
+  to {
+    flex: 2;
+  }
+}
