@@ -1,5 +1,6 @@
 import { MdEdit } from "react-icons/md";
 import { FaTrashAlt } from "react-icons/fa";
+
 import styles from "../styles/Task.module.css";
 
 const Task = ({ props }) => {

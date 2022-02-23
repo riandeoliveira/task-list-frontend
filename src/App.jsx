@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+
 import styles from "./styles/App.module.css";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Form from "./components/Form";
@@ -12,9 +14,9 @@ const App = () => {
   const inputElement = useRef();
 
   const callApi = (method, body) => {
-    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
-    let request = {
+    const request = {
       method: method,
       headers: {
         "Content-Type": "application/json",
@@ -22,18 +24,9 @@ const App = () => {
       body: JSON.stringify(body),
     };
 
-    // if (method === undefined || body === undefined) {
-    //   request = undefined;
-    // }
-
-    console.log(request);
-
     fetch(apiUrl, request)
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setTasks(data);
-      });
+      .then((data) => setTasks(data));
   };
 
   useEffect(() => {
