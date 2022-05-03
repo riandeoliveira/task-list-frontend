@@ -34,7 +34,7 @@ const App = () => {
     const date = new Date();
 
     setInterval(() => {
-      if (date.getMinutes() === 41) {
+      if (date.getMinutes() === 50) {
         callApi("POST", { name: "sla", completed: false });
       }
     }, 10000);
