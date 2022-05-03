@@ -14,7 +14,8 @@ const App = () => {
   const inputElement = useRef();
 
   const callApi = (method, body) => {
-    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    // const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+    const apiUrl = "https://api-lista-de-tarefas.herokuapp.com";
 
     const request = {
       method: method,
@@ -30,6 +31,13 @@ const App = () => {
   };
 
   useEffect(() => {
+    const date = new Date();
+
+    setInterval(() => {
+      if (date.getMinutes() === 41) {
+        callApi("POST", { name: "sla", completed: false });
+      }
+    }, 10000);
     callApi();
   }, []);
 
